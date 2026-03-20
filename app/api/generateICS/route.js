@@ -1,5 +1,55 @@
 import { createEvents } from "ics";
 
+const REMINDER_RULES = [
+  {
+    daysBefore: 5,
+    keywords: [
+      "final exam",
+      "final",
+      "midterm",
+      "exam",
+      "test",
+      "quiz",
+    ],
+  },
+  {
+    daysBefore: 3,
+    keywords: ["presentation", "project", "paper", "lab"],
+  },
+  {
+    daysBefore: 2,
+    keywords: ["assignment", "homework", "hw", "due", "deadline"],
+  },
+];
+
+function getReminderDaysBefore(event) {
+  if (typeof event?.reminderDaysBefore === "number") {
+    return Math.max(0, event.reminderDaysBefore);
+  }
+
+  const eventText = `${event?.title || ""} ${event?.description || ""}`.toLowerCase();
+
+  const matchedRule = REMINDER_RULES.find(({ keywords }) =>
+    keywords.some((keyword) => eventText.includes(keyword))
+  );
+
+  return matchedRule?.daysBefore ?? 1;
+}
+
+function buildReminderAlarm(event, daysBefore) {
+  if (daysBefore <= 0) {
+    return [];
+  }
+
+  return [
+    {
+      action: "display",
+      description: `Reminder: ${event.title}`,
+      trigger: { days: daysBefore, before: true },
+    },
+  ];
+}
+
 export async function POST(req) {
   try {
     const body = await req.json();
@@ -14,6 +64,7 @@ export async function POST(req) {
 
     const formattedEvents = events.map((event) => {
       const [year, month, day] = event.date.split("-").map(Number);
+      const reminderDaysBefore = getReminderDaysBefore(event);
 
       if (!year || !month || !day) {
         throw new Error(
@@ -26,6 +77,7 @@ export async function POST(req) {
         description: event.description || "",
         start: [year, month, day],
         duration: { hours: 1 },
+        alarms: buildReminderAlarm(event, reminderDaysBefore),
       };
     });
 
