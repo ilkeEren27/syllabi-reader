@@ -24,7 +24,10 @@
     "delete": "Supprimer l’événement",
     "description": "Description (optionnelle)",
     "addNew": "+ Ajouter un événement",
-    "download": "Télécharger le calendrier (.ics)"
+    "download": "Télécharger le calendrier (.ics)",
+    "addToGoogleCalendar": "Ajouter à Google Agenda",
+    "adding": "Ajout en cours…",
+    "added": "Ajouté !"
   },
   "MiniCalendar": {
     "events": "Événements :",

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/ilkeEren/Desktop/Software/activeProjects/syllabi-readerJS -maxdepth 2 -not -path *node_modules* -not -path *.next* -type d)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

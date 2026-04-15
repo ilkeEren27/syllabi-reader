@@ -24,7 +24,10 @@
     "delete": "イベントを削除",
     "description": "説明（任意）",
     "addNew": "+ 新しいイベントを追加",
-    "download": "カレンダーをダウンロード (.ics)"
+    "download": "カレンダーをダウンロード (.ics)",
+    "addToGoogleCalendar": "Googleカレンダーに追加",
+    "adding": "追加中…",
+    "added": "追加済み！"
   },
   "MiniCalendar": {
     "events": "イベント：",

@@ -24,7 +24,10 @@
     "delete": "حذف الحدث",
     "description": "الوصف (اختياري)",
     "addNew": "+ إضافة حدث جديد",
-    "download": "تنزيل التقويم (.ics)"
+    "download": "تنزيل التقويم (.ics)",
+    "addToGoogleCalendar": "إضافة إلى Google Calendar",
+    "adding": "جاري الإضافة...",
+    "added": "تمت الإضافة!"
   },
   "MiniCalendar": {
     "events": "الأحداث:",

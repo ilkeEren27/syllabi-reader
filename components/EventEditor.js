@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Trash2, Plus, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
+import GoogleCalendarButton from "@/components/GoogleCalendarButton";
 
 const EventEditor = ({ events, onUpdate, onDownload }) => {
   const t = useTranslations("EventEditor");
@@ -106,6 +107,8 @@ const EventEditor = ({ events, onUpdate, onDownload }) => {
           <Download className="h-5 w-5 mr-2" />
           {t("download")}
         </Button>
+
+        <GoogleCalendarButton events={editedEvents} />
       </div>
     </div>
   );

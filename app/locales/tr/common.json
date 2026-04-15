@@ -24,7 +24,10 @@
     "delete": "Etkinliği sil",
     "description": "Açıklama (opsiyonel)",
     "addNew": "+ Yeni etkinlik ekle",
-    "download": "Takvimi indir (.ics)"
+    "download": "Takvimi indir (.ics)",
+    "addToGoogleCalendar": "Google Takvim'e Ekle",
+    "adding": "Ekleniyor...",
+    "added": "Eklendi!"
   },
   "MiniCalendar": {
     "events": "Etkinlikler:",

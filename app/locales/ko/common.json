@@ -24,7 +24,10 @@
     "delete": "이벤트 삭제",
     "description": "설명 (선택)",
     "addNew": "+ 새 이벤트 추가",
-    "download": "캘린더 다운로드 (.ics)"
+    "download": "캘린더 다운로드 (.ics)",
+    "addToGoogleCalendar": "Google 캘린더에 추가",
+    "adding": "추가 중…",
+    "added": "추가됨!"
   },
   "MiniCalendar": {
     "events": "이벤트:",

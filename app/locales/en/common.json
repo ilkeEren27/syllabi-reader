@@ -12,7 +12,7 @@
     "extracting": "Extracting..."},
   "EventEditor": { "title": "Review & Edit Events", "new": "New Event", "delete": "Delete Event", 
     "description": "Description (optional)",
-    "addNew": "+ Add New Event", "download": "Download Calendar (.ics)" },
+    "addNew": "+ Add New Event", "download": "Download Calendar (.ics)", "addToGoogleCalendar": "Add to Google Calendar", "adding": "Adding...", "added": "Added!" },
   "MiniCalendar": { "events": "Events on", "noDescription": "No Description" },
   "NotFound": { "title": "The page you are looking for doesn't exist.", "return": "Return to homepage" }
 }
